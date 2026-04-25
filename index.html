@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/ios/50/door-opened.png" type="image/x-icon">
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            padding-top: 5.5rem;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        #mobile-nav ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        #mobile-nav a {
+            justify-content: flex-start;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .levelContainer {
+            padding: 1rem;
+        }
+
+        .modal-box {
+            width: min(90vw, 32rem);
+        }
+
+        @media (max-width: 768px) {
+            .footer .sites {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="w-full fixed top-0 left-0 z-50 mb-40">
+        <div class="navbar bg-blue-50 shadow-sm px-3 md:px-10 w-full">
+            <div class="flex gap-1 flex-1 items-center ">
+                <p class="text-sm md:text-xl font-bold">English</p>
+                <img src="assets/logo.png" alt="logo" class="w-4 md:w-12">
+                <p class="text-sm md:text-xl font-Tiro Bangla font-bold">জানালা</p>
+            </div>
+
+            <!-- for mobile device -->
+            <div class="dropdown dropdown-end md:hidden">
+                <div tabindex="0" role="button" class="btn m-1 px-3 py-1"><img src="assets/bars-solid.png" alt=""
+                        class="w-5 h-5"></div>
+                <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-25 p-1 shadow-sm">
+
+                    <li class="btn btn-primary btn-xs btn-outline hover:text-white"><a> <span><img
+                                    src="assets/fa-circle-question.png" alt=""></span> FAQ</a></li>
+
+                    <li class="btn btn-primary btn-xs btn-outline hover:text-white"><a><span><img
+                                    src="assets/fa-book-open.png" alt=""></span> Learn</a></li>
+                    <li class="btn btn-primary btn-xs btn-outline hover:text-white"><a><span><img
+                                    src="assets/fa-arrow-right-from-bracket.png" alt=""></span> Logout</a></li>
+                </ul>
+            </div>
+
+            <nav class="hidden md:flex flex-1 justify-end">
+                <ul class="menu menu-horizontal px-1 gap-2 flex flex-row">
+                    <li class="btn btn-primary btn-outline hover:text-white"><a href="#gotofaq"><span><img
+                                    src="assets/fa-circle-question.png" alt=""></span> FAQ</a></li>
+                    <li class="btn btn-primary btn-outline hover:text-white"><a href="#gotolesson"><span><img
+                                    src="assets/fa-book-open.png" alt=""></span> Learn</a></li>
+                    <li class="btn btn-primary btn-outline hover:text-white"><a><span><img
+                                    src="assets/fa-arrow-right-from-bracket.png" alt=""></span> Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </header>
+
+    <section
+        class="hero w-full max-w-7xl mx-auto mt-10 px-4 md:px-0 flex flex-col flex-col-reverse md:flex-row gap-10 justify-between items-center">
+        <div class="left space-y-4 text-center md:text-left">
+            <p class="text-md md:text-4xl font-bold"> <span class="text-[#00BCFF]">English</span> is Easy!!</p>
+            <p class="max-w-xl w-full leading-7 ">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+                আপনার দক্ষতা বাড়াতে চান, আমাদের
+                Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+
+
+            <input type="text" id="name" class="input max-w-sm w-full border-gray-300 rounded-md"
+                placeholder="Enter your Name" />
+            <input type="password" id="password" class="input max-w-sm w-full border-gray-300 rounded-md"
+                placeholder="Password" /><br>
+            <button class="btn btn-primary mt-4" onclick="getData()">Get Started</button>
+
+        </div>
+
+        <div class="right">
+            <img src="/assets/hero-student.png" alt="Student Image" class="w-full">
+        </div>
+    </section>
+
+
+
+    <section class="lessons w-full" id="gotolesson">
+        <div class="container w-full max-w-7xl mx-auto mt-20 text-center px-4">
+            <p class="text-2xl font-bold"><span class="text-[#00BCFF] ">Let's</span> Learn Vocabularies</p>
+
+            <div class="lesson-list flex flex-wrap gap-4 justify-center my-10">
+
+            </div>
+
+<!-- search bar -->
+            <div class="join flex flex-col sm:flex-row items-center gap-2 justify-center w-full max-w-xl mx-auto">
+                <div class="w-full">
+                    <label class="input input-bordered w-full">
+                        <input id="input-text" type="text" class="outline-none w-full" placeholder="Search vocabulary..." required />
+                    </label>
+                </div>
+                <button class="btn btn-primary join-item w-full sm:w-auto" id="src-button" onclick="searchWord()">Search</button>
+            </div>
+
+            <!-- loader -->
+            <div class="loader flex justify-center items-center px-10 py-10 hidden">
+                <span class="loading loading-bars loading-xl"></span>
+            </div>
+
+            <!-- level container -->
+            <div
+                class="levelContainer flex flex-wrap justify-center items-center gap-4 my-10 bg-gray-100 rounded-xl shadow-md">
+            </div>
+
+            <div id="selected-lesson"
+                class="select-lesson flex flex-col justify-center items-center bg-base-200 rounded-xl py-20 shadow-md space-y-2">
+                <p class="text-sm text-gray-400 font-bold">আপনি এখনো কোন Lesson Select করেন ন</p><br>
+                <p class=" text-md md:text-3xl font-bold">একটি Lesson Select করুন।</p>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FAQ section -->
+    <section class="FAQ w-full my-40" id="gotofaq">
+        <p class="text-2xl font-bold text-center mb-10"><span class="text-[#00BCFF] ">Frequently</span> Asked Questions
+        </p>
+
+        <div class="questions w-11/12 mx-auto space-y-5">
+
+            <div class="qs1 px-3 space-y-2 bg-gray-100 rounded-xl py-5 shadow">
+                <p class="text-sm md:text-lg font-semibold">1. How can I start learning English on this website?</p>
+                <p class=" text-sm md:text-lg text-gray-400">You can start by exploring our beginner lessons,
+                    interactive exercises,
+                    and quizzes. We also offer structured courses to guide you step by step.</p>
+            </div>
+
+            <div class="qs1 px-3 space-y-2 bg-gray-100 rounded-xl py-5 shadow">
+                <p class="text-sm md:text-lg font-semibold">2. Is this website free to use?</p>
+
+            </div>
+
+            <div class="qs1 px-3 space-y-2 bg-gray-100 rounded-xl py-5 shadow">
+                <p class="text-sm md:text-lg font-semibold">3. Do I need to create an account?</p>
+
+            </div>
+            <div class="qs1 px-3 space-y-2 bg-gray-100 rounded-xl py-5 shadow">
+                <p class="text-sm md:text-lg font-semibold">4. How can I build my English vocabulary?</p>
+
+            </div>
+            <div class="qs1 px-3 space-y-2 bg-gray-100 rounded-xl py-5 shadow">
+                <p class="text-sm md:text-lg font-semibold">5. Do you offer certificates for completed courses?</p>
+
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <!-- Modal testing -->
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="modal-container" class="space-y-4 px-3">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- footer section -->
+    <footer
+        class="mt-40 bg-blue-50 shadow-sm px-10 w-full flex flex-col md:flex-row justify-center   md:justify-between items-center py-10">
+
+        <div class="left w-11/12 mx-auto py-5 space-y-3">
+            <div class="flex gap-1 flex-1 items-center ">
+                <p class="text-xl font-bold">English</p>
+                <img src="assets/logo.png" alt="logo">
+                <p class="font-Tiro Bangla font-bold">জানালা</p>
+            </div>
+            <p class="text-md font-bold font-bangla text-gray-500">ইংরেজি শিখুন সহজে</p>
+            <p class="text-sm font-light text-gray-500">Providing ED-Tech Applications since 2025</p>
+        </div>
+
+        <div class="right mt-10">
+            <p class="text-sm uppercase font-bold text-gray-500">Follow us</p>
+            <div class="sites flex gap-2 mt-3 items-center">
+                <a href="#" class="text-gray-400 text-xl"><img src="assets/fb-thumb.png" alt=""></a>
+                <a href="#" class="text-gray-400 text-xl"><img src="assets/youtube-thumb.png" alt=""></a>
+                <a href="#" class="text-gray-400 text-xl"><img src="assets/instagram-thumb.png" alt=""></a>
+                <a href="#" class="text-gray-400 text-xl"><img src="assets/github-thumb.png" alt=""></a>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
