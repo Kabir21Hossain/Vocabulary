@@ -29,6 +29,10 @@ The application uses client-side JavaScript to load lesson data and vocabulary d
 - `assets/` — Local image and icon resources used by the UI
 - `English-Janala.fig` — Figma design source file
 
+## Live Demo
+
+- https://kabir21hossain.github.io/Vocabulary/
+
 ## Getting Started
 
 1. Clone or download the repository.
