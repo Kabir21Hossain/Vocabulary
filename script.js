@@ -79,7 +79,7 @@ const showDetails = (level_no) => {
         );
 
         const img = document.createElement("img");
-        img.src = "assets/alert-error.png";
+        img.src = "./assets/alert-error.png";
         img.alt = "No words found";
         img.classList.add("mx-auto", "my-10", "w-24", "h-24");
         div.appendChild(img);
